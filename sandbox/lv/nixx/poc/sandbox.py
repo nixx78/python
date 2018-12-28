@@ -13,5 +13,12 @@ print(x(5, 11))
 p1 = Person('1', 'Name.Value', 'Surname.Value')
 print(p1.surname)
 
-# del p1.surname
-# print(p1.surname)
+del p1.surname
+
+try:
+    s = p1.surname
+except: AttributeError
+print('Attribute not exists')
+
+if not hasattr(p1, 'surname'):
+    print('No attribute')
