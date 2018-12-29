@@ -10,7 +10,7 @@ print(s)
 x = lambda a, b: a + b
 print(x(5, 11))
 
-p1 = Person('1', 'Name.Value', 'Surname.Value')
+p1 = Person(1, 'Name.Value', 'Surname.Value')
 print(p1.surname)
 
 del p1.surname
