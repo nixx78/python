@@ -1,4 +1,5 @@
 import csv
+import json
 from datetime import datetime
 from itertools import groupby
 
@@ -15,10 +16,18 @@ with open('txn.csv') as csvfile:
         txn['accountId'] = row['account_id']
         txns.append(txn)
 
+report = []
+
 for account, accountGroup in groupby(txns, lambda x: x['accountId']):
-    print('Account: ', account)
     for currency, currencyGroup in groupby(accountGroup, lambda x: x['currency']):
-        currs = list(currencyGroup)
-        print('\t\tCurrency:', currency)
-        for c in currs:
-            print('\t\t\tid:', c['id'], 'date: ', c['date'].strftime('%m/%d/%Y'), c['amount'])
+        accTxns = []
+        for c in currencyGroup:
+            accTxns.append({'id': c['id'], 'date': c['date'].strftime('%m/%d/%Y'), 'amount': c['amount']})
+
+        report.append({'account': account, 'currency': currency, 'txns': accTxns})
+
+json = json.dumps(report, sort_keys=True, indent=4)
+print(json)
+
+outFile = open('report.json', "w")
+outFile.write(json)
