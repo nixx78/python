@@ -22,3 +22,55 @@ print('Attribute not exists')
 
 if not hasattr(p1, 'surname'):
     print('No attribute')
+
+print('-------------------')
+
+print(list(range(1, 10, 2)))
+
+print('-------------------')
+
+for i in range(3):
+    print(i)
+
+print('-------------------')
+i = 0
+while i < 5:
+    print(i)
+    i = i + 1
+
+print('-------------------')
+i = 0
+while i < 5:
+    if i == 2:
+        break
+    else:
+        i = i + 1
+    print(i)
+
+
+print('-------------------')
+print(i)
+
+
+my_list = [1, 2, 3, 4, 5]
+
+for i in my_list:
+    if i == 3:
+        print("Item found!")
+        break
+    print(i)
+else:
+    print("Item not found!")
+
+print('-------------------')
+for i in range(3):
+    print(i)
+    if i == 2:
+        break
+else:
+    print('else')
+
+print('-------------------')
+lst = ['one', 'two', 'three']
+for p, c in enumerate(lst):
+    print(p, ':', c)
