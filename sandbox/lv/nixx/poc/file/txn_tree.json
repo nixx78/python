@@ -1,0 +1,62 @@
+[
+    {
+        "account": "a110",
+        "currency": "USD",
+        "txns": [
+            {
+                "amount": 100.0,
+                "date": "12/29/2018",
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "account": "a100",
+        "currency": "USD",
+        "txns": [
+            {
+                "amount": 12.1,
+                "date": "12/29/2018",
+                "id": "2"
+            },
+            {
+                "amount": 3.12,
+                "date": "12/29/2018",
+                "id": "21"
+            }
+        ]
+    },
+    {
+        "account": "a100",
+        "currency": "EUR",
+        "txns": [
+            {
+                "amount": 6.1,
+                "date": "12/28/2018",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "account": "a101",
+        "currency": "EUR",
+        "txns": [
+            {
+                "amount": 1.03,
+                "date": "12/29/2018",
+                "id": "31"
+            }
+        ]
+    },
+    {
+        "account": "a102",
+        "currency": "EUR",
+        "txns": [
+            {
+                "amount": 3.9,
+                "date": "12/29/2018",
+                "id": "4"
+            }
+        ]
+    }
+]

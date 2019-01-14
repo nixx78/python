@@ -29,5 +29,5 @@ for account, accountGroup in groupby(txns, lambda x: x['accountId']):
 json = json.dumps(report, sort_keys=True, indent=4)
 print(json)
 
-outFile = open('report.json', "w")
+outFile = open('report.out.json', "w")
 outFile.write(json)
