@@ -69,23 +69,4 @@ for i in range(3):
 else:
     print('else')
 
-print('-------------------')
-lst = ['one', 'two', 'three']
-for p, c in enumerate(lst):
-    print(p, ':', c)
-
-lst = ['1', '2', '3', '4', '5']
-if 'X' in lst:
-    print('exists, lenght', len(lst))
-else:
-    print('not exists , lenght', len(lst))
-
-# Union & update sample
-colors = {'red', 'blue', 'orange'}
-colors = colors.union({'red', 'blue', 'green'})
-colors.update({'white', 'black'})
-print(colors)
-
-print('difference', colors.difference({'yellow', 'dark blue', 'red'})) # without red
-print('difference', {'yellow', 'dark blue', 'red'}.difference(colors))
 
