@@ -9,7 +9,6 @@ finally:
 
 print('======================')
 
-
 class ValidationError(Exception):
     def __init__(self, i, errors):
         super().__init__(i)
