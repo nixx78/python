@@ -1,4 +1,5 @@
 from lv.nixx.poc.domain.classes import *
+from datetime import datetime
 
 s = list('9123945678')
 
@@ -68,5 +69,18 @@ for i in range(3):
         break
 else:
     print('else')
+
+
+print('-------------------------------')
+d = datetime.now()
+print('Date, now:', d)
+print('This year is:', d.year)
+print('Today is:', d.strftime("%A"))
+
+print('Constructed date:', datetime(2019, 3, 1))
+print('Constructed date with time:', datetime(2019, 3, 1, 13, 1, 52))
+
+print('Formatted date:', datetime(2019, 3, 1, 13, 1, 52).strftime("%c"))
+print('Created from string:', datetime.strptime('01/03/2019 14:59:01', '%d/%m/%Y %H:%M:%S'))
 
 
